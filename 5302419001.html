@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>ATLAS'S RESTOURANT</title>
+        <link rel="stylesheet" href="5302419001.css">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+    </head>
+<body>
+    <h1>WELCOME TO ATLAS'S RESTOURANT</h1>
+    <h2><b>Get 10% discount for every purchase over 100,000 IDR</b></h2>
+    <main>
+        <script type="text/javascript">
+        function payment() {
+            var a   = 20000;
+			var b	= 10000;
+            var c   = 14000;
+            var d   = 11000;
+            var e   = 25000;
+            var f   = 15000;
+            var g   = 6000;
+            var h   = 8000;
+            var i   = 3000;
+			var disc    = 10/100;
+			var nomor, nama, z, qtyf1, qtyf2, qtyf3, qtyf4, qtyf5, qtyf6, qtyf7, qtyf8, qtyf9, qtyf10, qtyd1, qtyd2, qtyd3, qtyd4, qtyd5, qtyd6, qtyd7, qtyd8, qtyd9, qtyd10;
+			nomor   = document.getElementById('number').value;
+            nama    = document.getElementById('name').value;
+            qtyf1 = document.getElementById('qtyf1').value;
+			qtyf2 = document.getElementById('qtyf2').value;
+            qtyf3 = document.getElementById('qtyf3').value;
+            qtyf4 = document.getElementById('qtyf4').value;
+            qtyf5 = document.getElementById('qtyf5').value;
+            qtyf6 = document.getElementById('qtyf6').value;
+            qtyf7 = document.getElementById('qtyf7').value;
+            qtyf8 = document.getElementById('qtyf8').value;
+            qtyf9 = document.getElementById('qtyf9').value;
+            qtyf10 = document.getElementById('qtyf10').value;
+            qtyd1 = document.getElementById('qtyd1').value;
+			qtyd2 = document.getElementById('qtyd2').value;
+            qtyd3 = document.getElementById('qtyd3').value;
+            qtyd4 = document.getElementById('qtyd4').value;
+            qtyd5 = document.getElementById('qtyd5').value;
+            qtyd6 = document.getElementById('qtyd6').value;
+            qtyd7 = document.getElementById('qtyd7').value;
+            qtyd8 = document.getElementById('qtyd8').value;
+            qtyd9 = document.getElementById('qtyd9').value;
+            qtyd10 = document.getElementById('qtyd10').value;
+
+			z = (qtyf1*a) + (qtyf2*b) + (qtyf3*c) + (qtyf4*d) + (qtyf5*e) + (qtyf6*f) + (qtyf7*b) + (qtyf8*e) + (qtyf9*b) + (qtyf10*c) +
+            (qtyd1*b) + (qtyd2*g) + (qtyd3*g) + (qtyd4*g) + (qtyd5*h) + (qtyd6*i) + (qtyd7*i) + (qtyd8*i) + (qtyd9*i) + (qtyd10*i);
+
+			document.getElementById('tampilnumber').value = nomor;
+            document.getElementById('tampilname').value = nama;
+            document.getElementById('jumlah').value = z;
+
+            if (z >= 100000) 
+            {
+                document.getElementById('disc').value = z*disc;
+                z = z - (z*disc);
+                document.getElementById('total').value = z;
+			}
+            else
+            {
+                z = z;
+                document.getElementById('disc').value = 0;
+                document.getElementById('total').value = z;
+            }
+		}
+        function eraseText() {
+            document.getElementById('number').value = "";
+            document.getElementById('name').value = "";
+            document.getElementById('tampilnumber').value = "";
+            document.getElementById('tampilname').value = "";
+            document.getElementById('qtyf1').value = "";
+			document.getElementById('qtyf2').value = "";
+            document.getElementById('qtyf3').value = "";
+            document.getElementById('qtyf4').value = "";
+            document.getElementById('qtyf5').value = "";
+            document.getElementById('qtyf6').value = "";
+            document.getElementById('qtyf7').value = "";
+            document.getElementById('qtyf8').value = "";
+            document.getElementById('qtyf9').value = "";
+            document.getElementById('qtyf10').value = "";
+            document.getElementById('qtyd1').value = "";
+			document.getElementById('qtyd2').value = "";
+            document.getElementById('qtyd3').value = "";
+            document.getElementById('qtyd4').value = "";
+            document.getElementById('qtyd5').value = "";
+            document.getElementById('qtyd6').value = "";
+            document.getElementById('qtyd7').value = "";
+            document.getElementById('qtyd8').value = "";
+            document.getElementById('qtyd9').value = "";
+            document.getElementById('qtyd10').value = "";
+            document.getElementById('jumlah').value = "";
+            document.getElementById('disc').value = "";
+            document.getElementById('total').value = "";
+        }
+        </script>
+        <br/>
+        <form>
+            <fieldset>
+                <legend><b>CUSTOMER</b></legend>
+                <table>
+                    <tr>
+                        <td>Order Number</td>
+                        <td>:</td>
+                        <td><input type="number" name="number" id="number" placeholder="" required></td>
+                    </tr>
+                    <tr>
+                        <td>Name</td>
+                        <td>:</td>
+                        <td><input type="text" name="name" id="name" placeholder="" required></td>
+                    </tr>
+                </table>
+            </fieldset>
+            <br/>
+        <fieldset>
+            <legend><b>FOODS MENU</b></legend>
+            <table>
+                <tr>
+                    <td>Babat Gongso</td>
+                    <td>:</td>
+                    <td>20,000 IDR</td>
+                    <td><input type="number" min="0" max="100" name="food" id="qtyf1" placeholder="Quantity"></td>
+                </tr>
+                <tr>
+                    <td>Nasi Ayam</td>
+                    <td>:</td>
+                    <td>10,000 IDR</td>
+                    <td><input type="number" min="0" max="100" name="food" id="qtyf2" placeholder="Quantity"></td>
+                </tr>
+                <tr>
+                    <td>Tahu Gimbal</td>
+                    <td>:</td>
+                    <td>14,000 IDR</td>
+                    <td><input type="number" min="0" max="100" name="food" id="qtyf3" placeholder="Quantity"></td>
+                </tr>
+                <tr>
+                    <td>Nasi Pindang</td>
+                    <td>:</td>
+                    <td>11,000 IDR</td>
+                    <td><input type="number" min="0" max="100" name="food" id="qtyf4" placeholder="Quantity"></td>
+                </tr>
+                <tr>
+                    <td>Burung Belibis Bakar</td>
+                    <td>:</td>
+                    <td>25,000 IDR</td>
+                    <td><input type="number" min="0" max="100" name="food" id="qtyf5" placeholder="Quantity"></td>
+                </tr>
+                <tr>
+                    <td>Nasi Gandul</td>
+                    <td>:</td>
+                    <td>15,000 IDR</td>
+                    <td><input type="number" min="0" max="100" name="food" id="qtyf6" placeholder="Quantity"></td>
+                </tr>
+                <tr>
+                    <td>Mangut Welut</td>
+                    <td>:</td>
+                    <td>10,000 IDR</td>
+                    <td><input type="number" min="0" max="100" name="food" id="qtyf7" placeholder="Quantity"></td>
+                </tr>
+                <tr>
+                    <td>Sate Kalak</td>
+                    <td>:</td>
+                    <td>25,000 IDR</td>
+                    <td><input type="number" min="0" max="100" name="food" id="qtyf8" placeholder="Quantity"></td>
+                </tr>
+                <tr>
+                    <td>Mie Kopyak</td>
+                    <td>:</td>
+                    <td>10,000 IDR</td>
+                    <td><input type="number" min="0" max="100" name="food" id="qtyf9" placeholder="Quantity"></td>
+                </tr>
+                <tr>
+                    <td>Soto Bangkong</td>
+                    <td>:</td>
+                    <td>14,000 IDR</td>
+                    <td><input type="number" min="0" max="100" name="food" id="qtyf10" placeholder="Quantity"></td>
+                </tr>
+            </table>
+        </fieldset>
+        <br/>
+        <fieldset>
+            <legend><b>DRINKS MENU</b></legend>
+            <table>
+                <tr>
+                    <td>Es Puter</td>
+                    <td>:</td>
+                    <td>10,000 IDR</td>
+                    <td><input type="number" min="0" max="100" name="drink" id="qtyd1" placeholder="Quantity"></td>
+                </tr>
+                <tr>
+                    <td>Wedang Tahu</td>
+                    <td>:</td>
+                    <td>6,000 IDR</td>
+                    <td><input type="number" min="0" max="100" name="drink" id="qtyd2" placeholder="Quantity"></td>
+                </tr>
+                <tr>
+                    <td>Jamu Jun</td>
+                    <td>:</td>
+                    <td>6,000 IDR</td>
+                    <td><input type="number" min="0" max="100" name="drink" id="qtyd3" placeholder="Quantity"></td>
+                </tr>
+                <tr>
+                    <td>Wedang Kacang Tanah</td>
+                    <td>:</td>
+                    <td>6,000 IDR</td>
+                    <td><input type="number" min="0" max="100" name="drink" id="qtyd4" placeholder="Quantity"></td>
+                </tr>
+                <tr>
+                    <td>Kolak Setup Pisang</td>
+                    <td>:</td>
+                    <td>8,000 IDR</td>
+                    <td><input type="number" min="0" max="100" name="drink" id="qtyd5" placeholder="Quantity"></td>
+                </tr>
+                <tr>
+                    <td>Es Teh</td>
+                    <td>:</td>
+                    <td>3,000 IDR</td>
+                    <td><input type="number" min="0" max="100" name="drink" id="qtyd6" placeholder="Quantity"></td>
+                </tr>
+                <tr>
+                    <td>Teh Anget</td>
+                    <td>:</td>
+                    <td>3,000 IDR</td>
+                    <td><input type="number" min="0" max="100" name="drink" id="qtyd7" placeholder="Quantity"></td>
+                </tr>
+                <tr>
+                    <td>Es Jeruk</td>
+                    <td>:</td>
+                    <td>3,000 IDR</td>
+                    <td><input type="number" min="0" max="100" name="drink" id="qtyd8" placeholder="Quantity"></td>
+                </tr>
+                <tr>
+                    <td>Wedang Jeruk</td>
+                    <td>:</td>
+                    <td>3,000 IDR</td>
+                    <td><input type="number" min="0" max="100" name="drink" id="qtyd9" placeholder="Quantity"></td>
+                </tr>
+                <tr>
+                    <td>Es Sirup</td>
+                    <td>:</td>
+                    <td>3,000 IDR</td>
+                    <td><input type="number" min="0" max="100" name="drink" id="qtyd10" placeholder="Quantity"></td>
+                </tr>
+            </table>
+        </fieldset>
+        <br/><br/>
+        <fieldset>
+            <table>
+            <legend><b>BILLING CALCULATE</b></legend>
+                <tr>
+                    <td>Order Number</td>
+                    <td>:</td>
+                    <td><input type="number" id="tampilnumber" disabled></td>
+                </tr>
+                <tr>
+                    <td>Customer Name</td>
+                    <td>:</td>
+                    <td><input type="text" id="tampilname" disabled></td>
+                </tr>
+                <tr>
+                    <td>Total</td>
+                    <td>:</td>
+                    <td><input type="text" id="jumlah" disabled></td>
+                </tr>
+                <tr>
+                    <td>Discount</td>
+                    <td>:</td>
+                    <td><input type="text" id="disc" disabled></td>
+                </tr>
+                <tr>
+                    <td><b>Amount to be Paid</b></td>
+                    <td>:</td>
+                    <td><input type="text" id="total" disabled></td>
+                </tr>
+            </table>
+            <br/>
+            <button type="button" onclick="eraseText()">Clear</button>
+            <button type="button" onclick="payment()">Total</button>
+            </fieldset>
+        </form>
+    </main>
+</body>
+</html>

@@ -1,0 +1,56 @@
+body 
+{
+    background-image: url('https://i.pinimg.com/originals/73/dd/db/73dddba45353cda29c1fb9e1234f274d.jpg');
+}
+
+h1 
+{
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    text-align: center;
+    font-size: 350%;
+    letter-spacing: 5px;
+    background-color: rgb(46, 184, 126);
+    color: cornsilk;
+    margin-bottom: 0cm;
+}
+
+h2
+{
+    font-family: monospace;
+    text-align: center;
+    color: darkblue;
+    font-size: 200%;
+    letter-spacing: -3px;
+    background-color: chartreuse;
+    margin-top: 0cm;
+}
+
+p
+{
+	font-family: 'Times New Roman', Times, serif;
+	text-align: justify;
+}
+
+fieldset
+{
+	margin-left: 450px;
+    margin-right: 450px;
+    background-color: cadetblue;
+}
+
+legend
+{
+	font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    text-align: center;
+    font-size: larger;
+    color: darkblue;
+    background-color: chartreuse;
+}
+
+button
+{
+    text-align: center;
+    padding: 5px 12px 5px 12px;
+    background-color: rgb(4, 88, 22);
+    color: white;
+}
